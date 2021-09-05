@@ -25,18 +25,28 @@
         color:black;
 
     }
+    #data1{
+        background-color:lightcyan;
+        color: darkred;
+        border-radius: 1px;
+        border-color: white;
+        
+    }
+    #inn{
+        text-align: center;
+    }
 </style>
 <body>
     
-        
+        <h1 style="color: darkred; text-align: center;">&#9729;WEATHER MAP</h1>
             <div class="row" id="div1">
-                <div class="col-4"></div>
-                <div class="col-4 ms-5" id="inn">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4 " id="inn">
                     <input type="text" class="from-control mt-3 " id="ddd" placeholder="City-Name"><br>
-                    <button class="btn btn-primary mt-2 ms-4" onclick="searchDetails()">Get Update</button>
+                    <button class="btn btn-primary mt-lg-2 " onclick="searchDetails()">Get Update</button>
                 </div>
-               <div class="row mt-5" id="div2">
-                   <div class="col-12" id="data1"></div>
+               <div class="row mt-lg-5" id="div2">
+                   <div class="col-lg-12 wtr_core b_topBleed b_sideBleed b_bottomBleed wnoPrec cursorPointer" id="data1"></div>
                </div>
                 
     
@@ -68,16 +78,16 @@
         let windspeed=data.wind.speed
         let htmldata=`
     <div class="row">
-        <div class="col-3">Status:${status}</div>
-    <div class="col-6" style="font-size: 40px;"> Current temperature:${curr_temp}</div>
+        <div class="col-lg-3" class="bi bi-cloud-lightning-rain">&#9729;${status}</div>
+    <div class="col-lg-6" style="font-size: 40px;"> ${curr_temp}&#8451;</div>
    
-    <div class="col-3">Humidity:${humidity}<br> Pressure:${pressure}</div>
+    <div class="col-lg-3">Humidity:${humidity}<br> Pressure:${pressure}</div>
     </div>
-    <div class="row mt-3">
-    <div class="col-3">Min temperature:${min_temp}<br>Max temperature:${max_temp}</div>
-    <div class="col-3">Sea level:${sealevel}</div>
-    <div class="col-3">Ground level:${groundlevel}</div>
-    <div class="col-3">wind speed:${windspeed}</div>`;
+    <div class="row mt-lg-3">
+    <div class="col-lg-3">Min temperature:${min_temp}&#8451;<br>Max temperature:${max_temp}&#8451;</div>
+    <div class="col-lg-3">Sea level:${sealevel}</div>
+    <div class="col-lg-3">Ground level:${groundlevel}</div>
+    <div class="col-lg-3">wind speed:${windspeed}</div>`;
     data1.innerHTML=htmldata;
     console.log(data);
 
